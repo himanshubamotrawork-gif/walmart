@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get $500 Walmart Gift Card</title>
+  <title>Get $750 Walmart Gift Card</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X1TKV1265L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X1TKV1265L');
+</script>
   <style>
     :root {
       --primary: #0071ce;
@@ -204,18 +213,30 @@
       </div>
 
       <div class="footer">
-        This promotion is not affiliated with or sponsored by Walmart.
-        Terms & conditions apply.
       </div>
 
     </div>
   </div>
 
   <script>
-    function redirect() {
-      window.location.href = "https://trkio.org/aff_c?offer_id=3291&aff_id=17763";
-    }
+  var clicked = false;
+function redirect() {
+  if (clicked) return;
+  clicked = true;
 
+  if (typeof gtag === 'function') {
+    gtag('event', 'start_now_click', {
+      event_category: 'cta',
+      event_label: 'Walmart Gift Card',
+      value: 1,
+      transport_type: 'beacon'
+    });
+  }
+
+  setTimeout(function () {
+    window.location.href = "https://glctrk.org/aff_c?offer_id=3463&aff_id=17763";
+  }, 800);
+}
     (function () {
       var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
 
