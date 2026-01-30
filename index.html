@@ -11,8 +11,9 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'G-GBRHJC14D3');
+gtag('config', 'G-GBRHJC14D3', {
+  debug_mode: true
+});
 </script>
   <style>
     :root {
@@ -229,6 +230,7 @@ function redirect() {
       event_category: 'cta',
       event_label: 'Walmart Gift Card',
       value: 1,
+      debug_mode: true,
       transport_type: 'beacon'
     });
   }
